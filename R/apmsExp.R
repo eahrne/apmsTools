@@ -42,7 +42,8 @@ apmsExp <- function( targetSpecCountDf,controlSpecCountDf){
 
 readScaffoldSpecCountFile <- function(file,sep="\t", isControl=F, isUniprot=T){
 	
-	# Reads scaffold spectral count export and creates 
+	# Parse scaffold spectral count export (.xls) 
+	# Parses scaffold .xls and creates data.frame object
 	#
     # Args:
     #   file: path to scaffold .xls spectrum count export
@@ -65,7 +66,6 @@ readScaffoldSpecCountFile <- function(file,sep="\t", isControl=F, isUniprot=T){
 	specCountDf <- read.csv(file,skip=2,sep=sep, head=T)
 	# remove END OF FILE
 	specCountDf <-  specCountDf[1:(nrow(specCountDf)-1),]
-	
 	
 	### manage protein cluster analysis export. 1) Discard leadinf protein, 2) Remove protein description indentation
 	# Example:

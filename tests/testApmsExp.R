@@ -13,8 +13,6 @@ if(file.exists("/Users/erikahrne/dev/R/workspace/apmsTools/inst/testData/")){
 	kBaseDir <- path.package("apmsTools")
 }
 
-
-
 scaffoldTargetFile <- paste(kBaseDir,"/testData/PP2A-p53.xls",sep="/")
 scaffoldControlFile <- paste(kBaseDir,"/testData/GFP5.xls",sep="/")
 scaffoldControlNonRedundantFile <- paste(kBaseDir,"/testData/GFP_non-redundant_protein_cluster_analysis.xls",sep="/")
