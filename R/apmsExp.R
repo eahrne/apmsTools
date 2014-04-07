@@ -2,8 +2,6 @@
 # 
 # Author: erikahrne
 ###############################################################################
-
-
 apmsExp <- function( targetSpecCountDf,controlSpecCountDf){
 	
 	# Creates an apms experiment data container

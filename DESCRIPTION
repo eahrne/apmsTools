@@ -6,4 +6,5 @@ Date: 2014-04-01
 Author: Erik Ahrne
 Maintainer: Erik Ahrne <erik.ahrne@unibas.ch>
 Description: Several functions for handling/analyzing Spectral Count data from Affinity Purification Mass Spectrometry experiments
+Imports: seqinr
 License: GPL-3
