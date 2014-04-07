@@ -13,8 +13,8 @@ ehthumbs.db
 Thumbs.db
 
 ### eclipse
-^.settings
-^.project
+*.settings
+*.project
 
 ### shell scripts
 sh/
