@@ -3,8 +3,7 @@
 \alias{apmsTools}
 \docType{package}
 \title{
-Tools for analysis of Affinity Purification Mass Spectrometry
-data
+Tools for analysis of Affinity Purification Mass Spectrometry data
 }
 \description{
 Several functions for handling/analyzing Spectral Count data from Affinity Purification Mass Spectrometry experiments
