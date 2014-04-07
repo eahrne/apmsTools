@@ -93,7 +93,7 @@ optionList <- list(
 		make_option(c("-c", "--controlInputFile"), type="character", default="",
 				help="I/O: Scaffold .xls control file (REQUIRED)"
 		),	
-		make_option(c("-o", "--outputDir"), type="character", default="",
+		make_option(c("-o", "--outputDir"), type="character", default=".",
 				help="I/O:  Results Output Directory [default ./]"
 		),
 		### I/O
@@ -115,8 +115,6 @@ optionList <- list(
 )
 
 ### I/O END
-
-
 
 #get User Options
 userOptions <- getUserOptions(kVersion)

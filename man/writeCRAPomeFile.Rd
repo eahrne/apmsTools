@@ -27,10 +27,10 @@ writeCRAPomeFile(apmsExp, file, verbose = F)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{apmsExp}{
-apmsExp object
+An object of class apmsExp.
 }
   \item{file}{
-path to CRAPome output file
+Full path to output file.
 }
   \item{verbose}{
 verbose

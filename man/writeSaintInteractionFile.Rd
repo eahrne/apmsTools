@@ -1,22 +1,33 @@
-\name{plot.apmsExp}
-\alias{plot.apmsExp}
+\name{writeSaintInteractionFile}
+\alias{writeSaintInteractionFile}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Matrix of spectral count scatter plots.
+Write interaction SAINT input file.
 }
 \description{
-Produces scatter plot matrix of spectral counts for all bait combinations.
+Write interaction SAINT input file.
+
+Example:
+
+	PPP2R1A	PPP2R1A	sp|P30153|2AAA_HUMAN	64
+	
+	PPP2R1A	PPP2R1A	sp|Q9BUJ2|HNRL1_HUMAN	62
+	
+	PPP2R1A	PPP2R1A	sp|P08107|HSP71_HUMAN	29
 }
 \usage{
-plot.apmsExp(apmsExp, ...)
+writeSaintInteractionFile(apmsExp, file, verbose = F)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{apmsExp}{
 An object of class apmsExp.
 }
-  \item{\dots}{
-further arguments passed to or from other methods.
+  \item{file}{
+Full path to output file.
+}
+  \item{verbose}{
+verbose
 }
 }
 \details{

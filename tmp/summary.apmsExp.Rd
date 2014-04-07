@@ -2,10 +2,10 @@
 \alias{summary.apmsExp}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+apmsExp object summary
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+apmsExp object summary
 }
 \usage{
 summary.apmsExp(apmsExp)
@@ -13,53 +13,28 @@ summary.apmsExp(apmsExp)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{apmsExp}{
-%%     ~~Describe \code{apmsExp} here~~
+An object of class apmsExp.
 }
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+Not yet available
 }
 \references{
-%% ~put references to the literature/web site here ~
+Not yet available
 }
 \author{
-%%  ~~who you are~~
+Erik Ahrne
+
+erik.ahrne@unibas.ch
 }
 \note{
-%%  ~~further notes~~
+Not yet available
 }
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+Not yet available
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (apmsExp) 
-{
-    specCountOnlyDf <- apmsExp$specCountDf[, 4:ncol(apmsExp$specCountDf)]
-    isControl <- regexpr("^GFP\\_", names(specCountOnlyDf)) > 
-        -1
-    ret <- list()
-    ret$targetBaits <- names(specCountOnlyDf)[!isControl]
-    ret$controlBaits <- names(specCountOnlyDf)[isControl]
-    ret$nbPrey <- nrow(apmsExp$specCountDf)
-    ret$totSpecCountPerBait <- apply(specCountOnlyDf, 2, sum)
-    class(ret) <- c("summary.apmsExp")
-    return(ret)
-  }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

@@ -13,10 +13,10 @@ setProteinLength(apmsExp, fastaFile)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{apmsExp}{
-apmsExp object
+An object of class apmsExp.
 }
   \item{fastaFile}{
-full path to .fasta file
+Full path to .fasta file
 }
 }
 \details{
