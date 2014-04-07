@@ -3,40 +3,35 @@
 \alias{apmsTools}
 \docType{package}
 \title{
-Tools for analysis of Affinity Purification Mass Spectrometry data 
-~~ package title ~~
+Tools for analysis of Affinity Purification Mass Spectrometry
+data
 }
 \description{
-Several functions for handling/analyzing Spectral Count data from Affinity Purification Mass Spectrometry experiments 
-~~ A concise (1-5 lines) description of the package ~~
+Several functions for handling/analyzing Spectral Count data from Affinity Purification Mass Spectrometry experiments
 }
 \details{
 \tabular{ll}{
 Package: \tab apmsTools\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
+Version: \tab 0.1\cr
 Date: \tab 2014-04-01\cr
-License: \tab GPL-2\cr
+License: \tab GPL-3\cr
+Packaged: \tab 2014-04-04 09:26:40 UTC; erikahrne\cr
+Built: \tab R 3.0.1; ; 2014-04-04 09:26:45 UTC; unix\cr
 }
-~~ An overview of how to use the package, including the most important ~~
-~~ functions ~~
 }
 \author{
-Who wrote it
+Erik Ahrne
 
-Maintainer: Who to complain to <yourfault@somewhere.net>
-~~ The author and/or maintainer of the package ~~
+Maintainer: Erik Ahrne <erik.ahrne@unibas.ch>
+
 }
 \references{
-~~ Literature or other references for background information ~~
+Not yet available
 }
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in ~~
-~~ the R documentation directory ~~
 \keyword{ package }
 \seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
+Not yet available
 }
 \examples{
-~~ simple examples of the most important functions ~~
 }

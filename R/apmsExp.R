@@ -109,7 +109,7 @@ readScaffoldSpecCountFile <- function(file,sep="\t", isControl=F, isUniprot=T){
 		}
 	}
 	
-	out <- data.frame(proteinDesc,proteinLength,geneName,specCounts)
+	out <- data.frame(proteinDesc,geneName,proteinLength,specCounts)
 	rownames(out) <- proteinAC
 	names(specCountDf)
 	
@@ -209,7 +209,8 @@ writeSaintPreyFile <- function(apmsExp,file,verbose=F){
 	#	sp|Q9BUJ2|HNRL1_HUMAN	960	HNRNPUL1
 	#	sp|P08107|HSP71_HUMAN	700	HSPA1A
 	#	
-	#    # class "apmsExp"
+	#   
+    # class "apmsExp"
     #
     # Args:
     #   apmsExp: apmsExp object
@@ -267,7 +268,7 @@ print.summary.apmsExp <-function(apmsExpSummary){
 
 setProteinLength <- function(apmsExp,fastaFile){
 	
-	# Updates protein lengths (exrtracted from .fasta) in apmsExp object, 
+	# Updates protein lengths (extracted from .fasta) in apmsExp object. 
 	# class: "apmsExp"
     # Args:
     #   apmsExp: apmsExp object
@@ -299,6 +300,42 @@ setProteinLength <- function(apmsExp,fastaFile){
 	return(apmsExp)
 }
 
-
-# @TODO
-writeCRAPomeFile <- function(apmsExp,file,verbose=F){}
+writeCRAPomeFile <- function(apmsExp,file,verbose=F){
+	
+	# Write CRAPome input file  
+	# Example:
+	# PROTID	GENEID	PROTLEN	C1_SPC	C2_SPC	HDAC5_1_SPC	HDAC5_2_SPC
+	# PROTID	GENEID	PROTLEN	C	C	HDAC5	HDAC5
+	# Q9Y6M1	IGF2BP2	599	9	2	2	0
+	# Q9Y697	NFS1	457	0	0	14	8
+	# Q9Y618	NCOR2	2525	0	0	19	16
+	#	
+	#   
+    # class "apmsExp"
+    #
+    # Args:
+    #   apmsExp: apmsExp object
+    #   file: path to CRAPome output file
+	#
+	
+	# create headers
+	h1 <- c("PROTID","GENEID","PROTLEN",paste(names(apmsExp$specCountDf)[4:ncol(apmsExp$specCountDf)],"SPC",sep="_"))
+	h2 <- gsub("^GFP_.*","C",c(h1[1:3],names(apmsExp$specCountDf)[4:ncol(apmsExp$specCountDf)]))
+	
+	# create output df
+	out <- cbind(rownames(apmsExp$specCountDf),apmsExp$specCountDf[,-1])
+	names(out) <- h2
+ 	
+	# write h1 to file
+	cat(h1,file=file,sep="\t")
+	cat("\n",file=file,append=T)
+	# write h2 to file
+	cat(h2,file=file,sep="\t",append=T)
+	cat("\n",file=file,append=T)
+	# append data.frame to file
+	write.table(out,file=file,append=T,sep="\t",row.names=F,col.names=F)
+	
+	if(verbose){
+		cat("Created File ",file,"\n")
+	}
+}

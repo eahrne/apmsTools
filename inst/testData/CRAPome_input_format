@@ -1,0 +1,13 @@
+----------------
+Here is more detail about the matrix input format in the CRAPome (more info on the website):
+1. Each row provides information for one protein and its spectral counts in all of the AP experiments in the dataset, including the negative controls.
+2. The first column in the file must be the protein ID (the column must be named PROTID). Protein RefSeq ID, UniProt ID, Ensembl ID, or Official Gene Symbol can be used to specify the proteins.
+3. One can specify the Official Gene Name (columns named GENEID), protein length (PROTLEN) and protein description (DEFLINE) as additional columns in the input file. These columns can be located either immediately after the PROTID column, or as the last three columns (following the columns with spectral counts), but their corresponding column names must be specified exactly as shown in the parentheses.
+4. The rest of the columns in the file should contain the spectral counts.
+5. The file must start with a header containing two rows.
+The first row in the header should contain the names of the columns: PROTID (first column), GENEID, PROTLEN, and DEFLINE (second-fourth columns, or as the last columns in the file if used).
+ The names of the columns containing the spectral counts must correspond to the AP Names, with a '_SPC' or a '_NUMSPECSTOT' suffix following the AP Name. For example, if the AP name is
+  7576_RAF1, the column containing the protein spectral counts in that experiment should be named 7576_RAF1_SPC or 7576_RAF1_NUMSPECSTOT. The second row in the header should list the 
+  corresponding bait names/conditions for each of the AP experiments named in the first row (in BaitName_Condition format) directly underneath the AP name. For the other columns (PROTID, GENEID, PROTLEN, and DEFLINE), 
+  the second row in the header can contain any text, e.g. the names of these columns can be repeated.  
+--------------
