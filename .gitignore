@@ -1,5 +1,5 @@
 #### tmp
-tmp
+tmp/
 
 
 # OS generated files #
@@ -17,7 +17,7 @@ Thumbs.db
 ^.project
 
 ### shell scripts
-sh
+sh/
 *.sh
 
 
